@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet the team behind Santex AI — an AI-powered marketing agency built by marketers and engineers focused on real revenue results.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santexai.com/about.html">
+<meta property="og:title" content="About — Santex AI">
+<meta property="og:description" content="Meet the team behind Santex AI — an AI-powered marketing agency built by marketers and engineers focused on real revenue results.">
+<meta property="og:image" content="https://santexai.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About — Santex AI">
+<meta name="twitter:description" content="Meet the team behind Santex AI — an AI-powered marketing agency built by marketers and engineers focused on real revenue results.">
+<title>About — Santex AI</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
+<style>
+.page-hero { padding: clamp(5rem,10vw,8rem) 0 clamp(3rem,6vw,5rem); position:relative; overflow:hidden; }
+.page-hero::before {
+  content:''; position:absolute; top:-100px; right:-100px;
+  width:600px; height:600px;
+  background:radial-gradient(circle,rgba(26,111,255,0.07),transparent 70%);
+  pointer-events:none;
+}
+.hero-2col { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+.page-hero h1 { font-size:clamp(2.6rem,5vw,4rem); font-weight:900; color:#fff; letter-spacing:-2px; line-height:1.05; margin-bottom:1.1rem; }
+.page-hero p { color:var(--muted2); font-size:1.05rem; line-height:1.8; margin-bottom:1.75rem; }
+.about-visual {
+  background:var(--card); border:1px solid var(--border); border-radius:18px;
+  padding:2rem; position:relative;
+}
+.av-title { font-size:0.75rem; font-weight:700; color:var(--cyan); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:1.5rem; }
+.av-stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.av-stat { background:var(--card2); border-radius:10px; padding:1.1rem; }
+.av-num { font-size:1.8rem; font-weight:900; color:#fff; letter-spacing:-1px; line-height:1; }
+.av-num span { color:var(--cyan); }
+.av-lbl { font-size:0.72rem; color:var(--muted); margin-top:4px; }
+.av-bar-row { margin-top:1.25rem; }
+.av-bar-label { display:flex; justify-content:space-between; font-size:0.72rem; color:var(--muted); margin-bottom:0.4rem; }
+.av-bar-track { height:6px; background:var(--card2); border-radius:3px; overflow:hidden; margin-bottom:0.75rem; }
+.av-bar-fill { height:100%; border-radius:3px; background:linear-gradient(90deg,var(--blue),var(--cyan)); }
+
+/* Mission */
+.mission-band { background:var(--bg2); }
+.mission-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+.mission-label { font-size:0.72rem; font-weight:700; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem; }
+.mission-title { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#fff; letter-spacing:-1.5px; margin-bottom:1.25rem; line-height:1.1; }
+.mission-body { color:var(--muted2); font-size:0.95rem; line-height:1.85; }
+.mission-body + .mission-body { margin-top:1rem; }
+.values { display:flex; flex-direction:column; gap:1rem; }
+.val-item { background:var(--card); border:1px solid var(--border2); border-radius:12px; padding:1.25rem 1.5rem; display:flex; gap:1rem; align-items:flex-start; }
+.val-icon { width:38px; height:38px; border-radius:9px; background:rgba(26,111,255,0.1); border:1px solid rgba(26,111,255,0.2); display:flex; align-items:center; justify-content:center; color:var(--cyan); font-size:18px; flex-shrink:0; margin-top:2px; }
+.val-title { font-size:0.92rem; font-weight:700; color:#fff; margin-bottom:0.25rem; }
+.val-desc { font-size:0.82rem; color:var(--muted); line-height:1.65; }
+
+/* Team */
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin-top:3rem; }
+.team-card { background:var(--card); border:1px solid var(--border2); border-radius:var(--r); padding:1.5rem; text-align:center; transition:border-color 0.25s,transform 0.25s; }
+.team-card:hover { border-color:var(--border); transform:translateY(-3px); }
+.team-av { width:64px; height:64px; border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; color:#fff; }
+.team-name { font-size:0.95rem; font-weight:700; color:#fff; margin-bottom:0.2rem; }
+.team-role { font-size:0.78rem; color:var(--cyan); font-weight:600; margin-bottom:0.6rem; }
+.team-bio { font-size:0.8rem; color:var(--muted); line-height:1.65; }
+
+/* Timeline */
+.timeline { position:relative; margin-top:3rem; }
+.timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--border2); transform:translateX(-50%); }
+.tl-item { display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-bottom:2.5rem; align-items:center; }
+.tl-item:nth-child(even) .tl-content { order:-1; text-align:right; }
+.tl-content { }
+.tl-year { font-size:0.72rem; font-weight:700; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.4rem; }
+.tl-title { font-size:1.05rem; font-weight:800; color:#fff; margin-bottom:0.4rem; }
+.tl-desc { font-size:0.85rem; color:var(--muted); line-height:1.7; }
+.tl-dot {
+  width:12px; height:12px; border-radius:50%; background:var(--blue);
+  position:absolute; left:50%; transform:translate(-50%,-50%);
+  box-shadow:0 0 0 4px rgba(26,111,255,0.2);
+}
+
+/* CTA */
+.about-cta { background:var(--bg2); border-radius:20px; padding:clamp(2.5rem,5vw,4rem); text-align:center; margin-top:5rem; border:1px solid var(--border2); }
+.about-cta h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#fff; margin-bottom:1rem; letter-spacing:-1px; }
+.about-cta p { color:var(--muted2); margin-bottom:2rem; font-size:1rem; line-height:1.8; }
+.about-cta .btn-group { justify-content:center; }
+
+@media(max-width:900px){
+  .hero-2col { grid-template-columns:1fr; }
+  .about-visual { display:none; }
+  .mission-grid { grid-template-columns:1fr; }
+  .team-grid { grid-template-columns:repeat(2,1fr); }
+  .timeline::before { display:none; }
+  .tl-item { grid-template-columns:1fr; gap:0.5rem; }
+  .tl-item:nth-child(even) .tl-content { order:0; text-align:left; }
+}
+@media(max-width:600px){
+  .team-grid { grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="rr-nav">
+  <div class="wrap nav-inner">
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="nav-logo">Santex<span>AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero sec">
+  <div class="wrap hero-2col">
+    <div>
+      <div class="eyebrow">Who We Are</div>
+      <h1>We're Obsessed<br>With Your<br><span class="grad">Growth.</span></h1>
+      <p>Santex AI was built by marketers and engineers who were tired of agencies that overpromise and underdeliver. We built the platform we always wished existed.</p>
+      <div class="btn-group">
+        <a href="pricing.html" class="btn btn-blue">Work With Us &rarr;</a>
+        <a href="solutions.html" class="btn btn-outline">Our Solutions</a>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="av-title">Our Impact — Year to Date</div>
+      <div class="av-stats">
+        <div class="av-stat"><div class="av-num">2500<span>+</span></div><div class="av-lbl">Businesses scaled</div></div>
+        <div class="av-stat"><div class="av-num"><span>$</span>120M<span>+</span></div><div class="av-lbl">Revenue generated</div></div>
+        <div class="av-stat"><div class="av-num">98<span>%</span></div><div class="av-lbl">Client retention rate</div></div>
+        <div class="av-stat"><div class="av-num"><span>#</span>1</div><div class="av-lbl">Rated AI agency 2025</div></div>
+      </div>
+      <div class="av-bar-row" style="margin-top:1.5rem">
+        <div class="av-bar-label"><span>Client Satisfaction</span><span>96%</span></div>
+        <div class="av-bar-track"><div class="av-bar-fill" style="width:96%"></div></div>
+        <div class="av-bar-label"><span>Campaign Success Rate</span><span>92%</span></div>
+        <div class="av-bar-track"><div class="av-bar-fill" style="width:92%"></div></div>
+        <div class="av-bar-label"><span>On-Time Delivery</span><span>99%</span></div>
+        <div class="av-bar-track"><div class="av-bar-fill" style="width:99%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="sec mission-band">
+  <div class="wrap mission-grid">
+    <div>
+      <div class="mission-label">Our Mission</div>
+      <div class="mission-title">Marketing That Actually<br><span class="grad">Makes You Money</span></div>
+      <p class="mission-body">Most marketing agencies sell you vanity metrics — impressions, clicks, followers. We care about one thing: revenue. Every campaign, every decision, every dollar is tracked back to real business outcomes.</p>
+      <p class="mission-body">We built Santex AI to give small and mid-sized businesses access to the same AI-powered marketing technology that Fortune 500 companies use — at a price that actually makes sense.</p>
+    </div>
+    <div class="values">
+      <div class="val-item">
+        <div class="val-icon"><i class="ti ti-target"></i></div>
+        <div><div class="val-title">Results Over Vanity</div><div class="val-desc">We don't care about followers or impressions. We care about leads, customers, and revenue.</div></div>
+      </div>
+      <div class="val-item">
+        <div class="val-icon"><i class="ti ti-eye"></i></div>
+        <div><div class="val-title">Radical Transparency</div><div class="val-desc">You see everything. Every dollar spent, every click, every lead — in real time, always.</div></div>
+      </div>
+      <div class="val-item">
+        <div class="val-icon"><i class="ti ti-cpu"></i></div>
+        <div><div class="val-title">AI-First Thinking</div><div class="val-desc">We use the latest AI to work faster, smarter, and more efficiently than any traditional agency.</div></div>
+      </div>
+      <div class="val-item">
+        <div class="val-icon"><i class="ti ti-heart"></i></div>
+        <div><div class="val-title">Client Obsession</div><div class="val-desc">Your success is our success. We don't win unless you win — and we take that seriously.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">The Team</div>
+      <h2 class="sec-title">Built By People Who<br><span class="grad">Have Done It Before</span></h2>
+      <p class="sec-sub">Ex-Google, Meta, and HubSpot marketing pros — combined with elite engineers who built AI systems at scale.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#1a6fff,#00d4ff)">AK</div>
+        <div class="team-name">Aaron Khan</div>
+        <div class="team-role">CEO & Co-Founder</div>
+        <div class="team-bio">Former Head of Growth at a $50M SaaS. Built and sold 2 marketing agencies before Santex AI.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#7c3aed,#00d4ff)">SR</div>
+        <div class="team-name">Sofia Reyes</div>
+        <div class="team-role">CTO & Co-Founder</div>
+        <div class="team-bio">Ex-Google AI researcher. Built ML systems that processed 10B+ signals per day before joining Santex AI.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#1a6fff,#7c3aed)">MJ</div>
+        <div class="team-name">Marcus Johnson</div>
+        <div class="team-role">Head of Paid Media</div>
+        <div class="team-bio">Managed $30M+ in Google & Meta ad spend across 200+ accounts. Former agency director at Dentsu.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#00d4ff,#1a6fff)">LP</div>
+        <div class="team-name">Layla Patel</div>
+        <div class="team-role">Head of SEO & Content</div>
+        <div class="team-bio">Built SEO programs that generated $20M+ in organic revenue. Previously at HubSpot and Ahrefs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="wrap">
+  <div class="about-cta">
+    <h2>Let's Build Something<br><span class="grad">Great Together</span></h2>
+    <p>We're selective about who we work with — because we only take on clients we know we can get results for.</p>
+    <div class="btn-group">
+      <a href="pricing.html" class="btn btn-blue">See Our Plans &rarr;</a>
+      <a href="solutions.html" class="btn btn-outline">Explore Solutions</a>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<footer class="rr-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Santex<span>AI</span></a>
+        <p>AI-powered marketing that turns traffic into transactions. Built for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-x"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="solutions.html">AI SEO</a></li><li><a href="solutions.html">Google Ads</a></li><li><a href="solutions.html">Meta Ads</a></li><li><a href="solutions.html">Local Marketing</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="data-security.html">Data Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Santex AI. All rights reserved.</p>
+      <p>Built to run. Built to win.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var els=document.querySelectorAll('.val-item,.team-card,.av-stat');
+  els.forEach(function(e){ e.style.cssText+='opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease'; });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en,i){ if(en.isIntersecting){ setTimeout(function(){ en.target.style.opacity='1'; en.target.style.transform='translateY(0)'; },i*80); obs.unobserve(en.target); } });
+  },{threshold:0.1});
+  els.forEach(function(e){ obs.observe(e); });
+})();
+</script>
+</body>
+</html>

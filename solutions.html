@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Santex AI solutions: AI-powered SEO, Google &amp; Meta ad management, local marketing automation, and a unified analytics dashboard.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santexai.com/solutions.html">
+<meta property="og:title" content="Solutions — Santex AI">
+<meta property="og:description" content="Explore Santex AI solutions: AI-powered SEO, Google & Meta ad management, local marketing automation, and a unified analytics dashboard.">
+<meta property="og:image" content="https://santexai.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Solutions — Santex AI">
+<meta name="twitter:description" content="Explore Santex AI solutions: AI-powered SEO, Google & Meta ad management, local marketing automation, and a unified analytics dashboard.">
+<title>Solutions — Santex AI</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
+<style>
+.page-hero { padding: clamp(5rem,10vw,8rem) 0 clamp(3rem,6vw,5rem); text-align: center; position: relative; }
+.page-hero::before {
+  content:''; position:absolute; top:-100px; left:50%; transform:translateX(-50%);
+  width:700px; height:500px;
+  background:radial-gradient(ellipse,rgba(26,111,255,0.07),transparent 70%);
+  pointer-events:none;
+}
+.page-hero h1 { font-size: clamp(2.6rem,5vw,4rem); font-weight:900; color:#fff; letter-spacing:-2px; margin-bottom:1.1rem; }
+.page-hero p { color:var(--muted2); font-size:1.1rem; line-height:1.8; max-width:580px; margin:0 auto; }
+
+/* Solution cards */
+.sol-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:3.5rem; }
+.sol-card {
+  background:var(--card); border:1px solid var(--border2);
+  border-radius:18px; padding:2.25rem;
+  transition:border-color 0.25s,transform 0.25s;
+}
+.sol-card:hover { border-color:var(--border); transform:translateY(-4px); }
+.sol-card.featured { border-color:var(--blue); background:linear-gradient(135deg,rgba(26,111,255,0.06),var(--card)); }
+.sol-icon { width:52px; height:52px; border-radius:13px; background:rgba(26,111,255,0.1); border:1px solid rgba(26,111,255,0.2); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; font-size:24px; color:var(--cyan); }
+.sol-title { font-size:1.25rem; font-weight:800; color:#fff; margin-bottom:0.6rem; letter-spacing:-0.5px; }
+.sol-desc { font-size:0.9rem; color:var(--muted2); line-height:1.75; margin-bottom:1.5rem; }
+.sol-features { list-style:none; display:flex; flex-direction:column; gap:0.55rem; }
+.sol-features li { display:flex; align-items:center; gap:0.6rem; font-size:0.85rem; color:var(--muted2); }
+.sol-features li i { color:var(--cyan); font-size:14px; flex-shrink:0; }
+
+/* Tech stack */
+.tech-band { background:var(--bg2); padding:clamp(3rem,6vw,5rem) 0; }
+.tech-icons { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:2.5rem; }
+.tech-chip {
+  display:flex; align-items:center; gap:0.6rem;
+  background:var(--card); border:1px solid var(--border2);
+  border-radius:100px; padding:0.5rem 1.1rem;
+  font-size:0.82rem; font-weight:600; color:var(--muted2);
+  transition:all 0.2s;
+}
+.tech-chip:hover { border-color:var(--border); color:var(--text); }
+.tech-chip i { color:var(--cyan); font-size:16px; }
+
+/* Results strip */
+.results-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; }
+.r-box { background:var(--card); border:1px solid var(--border2); border-radius:var(--r); padding:1.75rem; text-align:center; }
+.r-num { font-size:2.5rem; font-weight:900; color:var(--cyan); letter-spacing:-1.5px; line-height:1; }
+.r-label { font-size:0.82rem; color:var(--muted); margin-top:0.4rem; font-weight:500; }
+
+/* CTA */
+.sol-cta { background:var(--bg2); border-radius:20px; padding:clamp(2.5rem,5vw,4rem); text-align:center; margin-top:5rem; border:1px solid var(--border2); }
+.sol-cta h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#fff; margin-bottom:1rem; letter-spacing:-1px; }
+.sol-cta p { color:var(--muted2); font-size:1rem; line-height:1.8; margin-bottom:2rem; }
+.sol-cta .btn-group { justify-content:center; }
+
+@media(max-width:768px){
+  .sol-grid { grid-template-columns:1fr; }
+  .results-strip { grid-template-columns:repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<nav class="rr-nav">
+  <div class="wrap nav-inner">
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="nav-logo">Santex<span>AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html" class="active">Solutions</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Our Solutions</div>
+    <h1>AI Tools That Actually<br><span class="grad">Drive Revenue</span></h1>
+    <p>Every solution is engineered to work together, adapt instantly, and deliver measurable outcomes for your business.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sol-grid">
+
+      <div class="sol-card featured">
+        <div class="sol-icon"><i class="ti ti-search"></i></div>
+        <div class="sol-title">AI-Powered SEO</div>
+        <p class="sol-desc">Rank higher on Google and show up in AI answer engines like ChatGPT, Gemini, and Perplexity. Our AI builds content strategies that generate compounding organic revenue.</p>
+        <ul class="sol-features">
+          <li><i class="ti ti-check"></i> Keyword intelligence & intent mapping</li>
+          <li><i class="ti ti-check"></i> GEO — appear in AI answer engines</li>
+          <li><i class="ti ti-check"></i> On-page & technical SEO automation</li>
+          <li><i class="ti ti-check"></i> Monthly AI content generation</li>
+          <li><i class="ti ti-check"></i> Competitor gap analysis</li>
+        </ul>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon"><i class="ti ti-ad-2"></i></div>
+        <div class="sol-title">Google & Meta Ads</div>
+        <p class="sol-desc">Stop wasting budget on ads that don't convert. Our AI manages bids, creative, and targeting in real time — cutting waste while scaling what actually works.</p>
+        <ul class="sol-features">
+          <li><i class="ti ti-check"></i> Real-time budget optimization</li>
+          <li><i class="ti ti-check"></i> Smart audience targeting & retargeting</li>
+          <li><i class="ti ti-check"></i> AI-generated ad copy & creatives</li>
+          <li><i class="ti ti-check"></i> Cross-platform campaign management</li>
+          <li><i class="ti ti-check"></i> Weekly performance reports</li>
+        </ul>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon"><i class="ti ti-map-pin"></i></div>
+        <div class="sol-title">Local & Google Business</div>
+        <p class="sol-desc">Dominate local search. We automate your Google Business Profile — reviews, posts, Q&A, and local citations — so you rank #1 in your area without the manual work.</p>
+        <ul class="sol-features">
+          <li><i class="ti ti-check"></i> Google Business Profile management</li>
+          <li><i class="ti ti-check"></i> Review monitoring & automated responses</li>
+          <li><i class="ti ti-check"></i> Local citation building</li>
+          <li><i class="ti ti-check"></i> NAP consistency across directories</li>
+          <li><i class="ti ti-check"></i> Local keyword rank tracking</li>
+        </ul>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon"><i class="ti ti-layout-dashboard"></i></div>
+        <div class="sol-title">Unified Dashboard & Analytics</div>
+        <p class="sol-desc">One command center for everything. Track SEO, ads, leads, and revenue in real time. No more juggling 10 different tools or waiting for monthly reports.</p>
+        <ul class="sol-features">
+          <li><i class="ti ti-check"></i> Live campaign performance tracking</li>
+          <li><i class="ti ti-check"></i> Competitor tracking & analysis</li>
+          <li><i class="ti ti-check"></i> Lead source attribution</li>
+          <li><i class="ti ti-check"></i> Automated weekly email reports</li>
+          <li><i class="ti ti-check"></i> Mobile app access</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<div class="tech-band">
+  <div class="wrap center">
+    <div class="eyebrow">Built On</div>
+    <h2 class="sec-title">Latest Technology.<br><span class="grad">Real Intelligence.</span></h2>
+    <p class="sec-sub">Every component is engineered to work together, adapt instantly, and deliver consistent outcomes.</p>
+    <div class="tech-icons">
+      <div class="tech-chip"><i class="ti ti-brand-google"></i> Google Ads API</div>
+      <div class="tech-chip"><i class="ti ti-brand-meta"></i> Meta Ads API</div>
+      <div class="tech-chip"><i class="ti ti-cpu"></i> OpenAI GPT-4o</div>
+      <div class="tech-chip"><i class="ti ti-chart-bar"></i> Google Analytics 4</div>
+      <div class="tech-chip"><i class="ti ti-search"></i> Google Search Console</div>
+      <div class="tech-chip"><i class="ti ti-map"></i> Google Business API</div>
+      <div class="tech-chip"><i class="ti ti-brand-mailchimp"></i> Mailchimp</div>
+      <div class="tech-chip"><i class="ti ti-bolt"></i> Zapier Automation</div>
+      <div class="tech-chip"><i class="ti ti-database"></i> Semrush Data</div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Proven Results</div>
+      <h2 class="sec-title">Numbers That<br><span class="grad">Don't Lie</span></h2>
+    </div>
+    <div class="results-strip">
+      <div class="r-box"><div class="r-num">312%</div><div class="r-label">Average ROI increase in year 1</div></div>
+      <div class="r-box"><div class="r-num">4.8x</div><div class="r-label">Lead to customer conversion lift</div></div>
+      <div class="r-box"><div class="r-num">30%</div><div class="r-label">Average reduction in ad spend waste</div></div>
+      <div class="r-box"><div class="r-num">#1</div><div class="r-label">Average local rank within 90 days</div></div>
+    </div>
+
+    <div class="sol-cta">
+      <h2>Find the Right Solution<br><span class="grad">for Your Business</span></h2>
+      <p>Not sure where to start? Our team will audit your digital presence for free and recommend exactly what you need.</p>
+      <div class="btn-group">
+        <a href="pricing.html" class="btn btn-blue">View Pricing &rarr;</a>
+        <a href="about.html" class="btn btn-outline">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="rr-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Santex<span>AI</span></a>
+        <p>AI-powered marketing that turns traffic into transactions. Built for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-x"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="solutions.html">AI SEO</a></li><li><a href="solutions.html">Google Ads</a></li><li><a href="solutions.html">Meta Ads</a></li><li><a href="solutions.html">Local Marketing</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="data-security.html">Data Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Santex AI. All rights reserved.</p>
+      <p>Built to run. Built to win.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var els=document.querySelectorAll('.sol-card,.r-box,.tech-chip');
+  els.forEach(function(e){ e.style.cssText+='opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease'; });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en,i){ if(en.isIntersecting){ setTimeout(function(){ en.target.style.opacity='1'; en.target.style.transform='translateY(0)'; },i*60); obs.unobserve(en.target); } });
+  },{threshold:0.08});
+  els.forEach(function(e){ obs.observe(e); });
+})();
+</script>
+</body>
+</html>

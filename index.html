@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Santex AI is an AI-powered marketing agency helping businesses grow with SEO, Google &amp; Meta ads, and local marketing automation.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santexai.com/">
+<meta property="og:title" content="Santex AI — AI-Powered Marketing Agency">
+<meta property="og:description" content="Santex AI is an AI-powered marketing agency helping businesses grow with SEO, Google & Meta ads, and local marketing automation.">
+<meta property="og:image" content="https://santexai.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Santex AI — AI-Powered Marketing Agency">
+<meta name="twitter:description" content="Santex AI is an AI-powered marketing agency helping businesses grow with SEO, Google & Meta ads, and local marketing automation.">
+<title>Santex AI — AI-Powered Marketing Agency</title>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Santex AI",
+  "url": "https://santexai.com",
+  "description": "AI-powered marketing agency offering SEO, Google & Meta ad management, and local marketing automation.",
+  "areaServed": "AE",
+  "priceRange": "AED 950 - AED 2,250"
+}
+</script>
+<script src="nav.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
+<style>
+/* ── HERO ── */
+.hero { padding: clamp(6rem,12vw,10rem) 0 clamp(4rem,8vw,7rem); position: relative; overflow: hidden; }
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 600px;
+  background: radial-gradient(ellipse at center, rgba(26,111,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center; position: relative;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(26,111,255,0.08);
+  border: 1px solid rgba(26,111,255,0.25);
+  border-radius: 100px; padding: 0.38rem 1rem;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--cyan); letter-spacing: 0.05em;
+  margin-bottom: 1.6rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 4.6vw, 3.75rem);
+  font-weight: 900; color: #fff;
+  letter-spacing: -1.75px; line-height: 1.08;
+  margin-bottom: 1.4rem;
+}
+.hero h1 .grad {
+  text-shadow: 0 0 30px rgba(0,212,255,0.22);
+  background-size: 200% auto;
+  animation: shimmer 4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+.hero-sub {
+  color: var(--muted2); font-size: 1.05rem;
+  line-height: 1.8; margin-bottom: 2.2rem; max-width: 460px;
+}
+.hero-pills { display: flex; gap: 0.65rem; margin-top: 1.8rem; flex-wrap: wrap; }
+.pill {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border2);
+  border-radius: 100px; padding: 0.32rem 0.85rem;
+  font-size: 0.75rem; color: var(--muted2);
+}
+.pill i { color: var(--cyan); font-size: 13px; }
+
+/* ── DASHBOARD ── */
+.dash {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px; padding: 1.5rem;
+  position: relative; overflow: hidden;
+}
+.dash::after {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(26,111,255,0.1), transparent 70%);
+  pointer-events: none;
+}
+.dash-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 1.2rem; }
+.dash-dot { width: 11px; height: 11px; border-radius: 50%; }
+.dash-label { font-size: 0.72rem; color: var(--muted); font-weight: 600; margin-left: 5px; }
+.dash-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+.d-stat { background: var(--card2); border-radius: 10px; padding: 0.85rem; }
+.d-val { font-size: 1.4rem; font-weight: 900; color: #fff; line-height: 1; }
+.d-val.c-cyan { color: var(--cyan); }
+.d-val.c-blue { color: var(--blue); }
+.d-lbl { font-size: 0.67rem; color: var(--muted); margin-top: 4px; }
+.chart-wrap { background: var(--card2); border-radius: 10px; padding: 1rem; margin-bottom: 0.8rem; }
+.chart-lbl { font-size: 0.68rem; color: var(--muted); font-weight: 600; margin-bottom: 0.65rem; }
+.bars { display: flex; align-items: flex-end; gap: 5px; height: 60px; }
+.bar { flex: 1; border-radius: 4px 4px 0 0; }
+.act-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.act-item { display: flex; align-items: center; gap: 0.7rem; background: var(--card2); border-radius: 9px; padding: 0.6rem 0.8rem; }
+.act-icon { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.act-text { flex: 1; font-size: 0.72rem; color: var(--muted); }
+.act-text strong { color: var(--text); font-weight: 600; }
+.act-val { font-size: 0.72rem; font-weight: 700; color: var(--cyan); }
+
+/* ── LOGOS ── */
+.logos-band {
+  background: var(--bg2);
+  border-top: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.logos-label { text-align: center; font-size: 0.75rem; color: var(--muted); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.logos-track { display: flex; gap: 3rem; align-items: center; animation: scroll 22s linear infinite; width: max-content; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.logo-item { font-size: 0.85rem; font-weight: 700; color: var(--muted); white-space: nowrap; opacity: 0.6; }
+
+/* ── STATS ── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(5,1fr);
+  gap: 1px; background: var(--border2);
+  border: 1px solid var(--border2); border-radius: var(--r);
+  overflow: hidden; margin-top: 5rem;
+}
+.stat-box { background: var(--bg); padding: 2rem 1.5rem; text-align: center; }
+.s-num { font-size: 2.4rem; font-weight: 900; color: #fff; letter-spacing: -1.5px; line-height: 1; }
+.s-num .c { color: var(--cyan); }
+.s-desc { font-size: 0.8rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; }
+
+/* ── FEATURES ── */
+.feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
+.feat-card { background: var(--card); border: 1px solid var(--border2); border-radius: var(--r); padding: 1.75rem; transition: border-color 0.25s, transform 0.25s; }
+.feat-card:hover { border-color: var(--border); transform: translateY(-4px); }
+.f-icon {
+  width: 46px; height: 46px; border-radius: 11px;
+  background: rgba(26,111,255,0.1); border: 1px solid rgba(26,111,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.1rem; font-size: 20px; color: var(--cyan);
+}
+.f-title { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+.f-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
+
+/* ── PROCESS ── */
+.process-bg { background: var(--bg2); }
+.process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3rem; }
+.p-step { text-align: center; padding: 1rem; }
+.p-num {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: rgba(26,111,255,0.08); border: 2px solid var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.1rem; font-size: 1rem; font-weight: 900; color: var(--blue);
+}
+.p-title { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+.p-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+/* ── TESTIMONIALS ── */
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
+.t-card { background: var(--card); border: 1px solid var(--border2); border-radius: var(--r); padding: 1.75rem; }
+.t-stars { display: flex; gap: 3px; margin-bottom: 1rem; color: #f5c518; font-size: 14px; }
+.t-quote { font-size: 0.9rem; color: var(--muted2); line-height: 1.78; font-style: italic; margin-bottom: 1.4rem; }
+.t-author { display: flex; align-items: center; gap: 0.75rem; }
+.t-av { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 800; flex-shrink: 0; }
+.t-name { font-size: 0.86rem; font-weight: 700; color: #fff; }
+.t-role { font-size: 0.73rem; color: var(--muted); }
+
+/* ── CTA ── */
+.cta-wrap {
+  background: linear-gradient(135deg, rgba(26,111,255,0.1), rgba(0,212,255,0.05));
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: clamp(3rem,6vw,5rem); text-align: center;
+  margin: 5rem 0;
+}
+.cta-wrap h2 { font-size: clamp(2rem,4vw,3rem); font-weight: 900; color: #fff; letter-spacing: -1.5px; margin-bottom: 1rem; }
+.cta-wrap p { color: var(--muted2); margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.8; }
+.cta-wrap .btn-group { justify-content: center; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .dash { display: none; }
+  .stats-row { grid-template-columns: repeat(3,1fr); }
+  .feat-grid { grid-template-columns: repeat(2,1fr); }
+  .process-grid { grid-template-columns: repeat(2,1fr); }
+  .testi-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .stats-row { grid-template-columns: repeat(2,1fr); }
+  .feat-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .hero { padding: clamp(3.5rem,10vw,5rem) 0 2.5rem; }
+  .hero h1 { font-size: 2.15rem; letter-spacing: -1px; line-height: 1.15; }
+  .hero-sub { font-size: 0.95rem; max-width: 100%; }
+  .sec-title { font-size: 1.7rem !important; letter-spacing: -0.75px !important; line-height: 1.2 !important; }
+  .cta-wrap h2 { font-size: 1.8rem; letter-spacing: -0.75px; }
+}
+
+/* ── ENTRANCE ANIMATION ── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.hero-inner > div:first-child > * { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+.hero-tag { animation-delay: 0.05s; }
+.hero h1 { animation-delay: 0.15s; }
+.hero-sub { animation-delay: 0.25s; }
+.hero .btn-group { animation-delay: 0.35s; }
+.hero-pills { animation-delay: 0.45s; }
+.dash { opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+</style>
+</head>
+<body>
+
+<nav class="rr-nav">
+  <div class="wrap nav-inner">
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="nav-logo">Santex<span>AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-tag"><span class="dot-live"></span> AI-Powered Growth Engine</div>
+      <h1>Turn Clicks Into<br><span class="grad">Real Revenue.</span></h1>
+      <p class="hero-sub">Santex AI combines AI intelligence with battle-tested marketing to drive leads, grow conversions, and scale your business — fast.</p>
+      <div class="btn-group">
+        <a href="pricing.html" class="btn btn-blue">Start Growing Now &rarr;</a>
+        <a href="solutions.html" class="btn btn-outline">See Solutions</a>
+      </div>
+      <div class="hero-pills">
+        <span class="pill"><i class="ti ti-check"></i> No contracts</span>
+        <span class="pill"><i class="ti ti-check"></i> We work for real results</span>
+        <span class="pill"><i class="ti ti-check"></i> 24/7 AI monitoring</span>
+      </div>
+    </div>
+    <div class="dash">
+      <div class="dash-bar">
+        <div class="dash-dot" style="background:#ff5f57"></div>
+        <div class="dash-dot" style="background:#febc2e"></div>
+        <div class="dash-dot" style="background:#28c840"></div>
+        <span class="dash-label">Revenue Dashboard — Live</span>
+      </div>
+      <div class="dash-stats">
+        <div class="d-stat"><div class="d-val">$84K</div><div class="d-lbl">Revenue this month</div></div>
+        <div class="d-stat"><div class="d-val c-cyan">+312%</div><div class="d-lbl">ROI growth</div></div>
+        <div class="d-stat"><div class="d-val c-blue">4.8x</div><div class="d-lbl">Lead conversions</div></div>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-lbl">Campaign Performance — Last 7 Days</div>
+        <div class="bars" id="bars"></div>
+      </div>
+      <div class="act-list">
+        <div class="act-item">
+          <div class="act-icon" style="background:rgba(26,111,255,0.15)"><i class="ti ti-bolt" style="color:var(--cyan);font-size:13px"></i></div>
+          <div class="act-text"><strong>Google Ads</strong> auto-optimized budget</div>
+          <div class="act-val">+22%</div>
+        </div>
+        <div class="act-item">
+          <div class="act-icon" style="background:rgba(0,212,255,0.1)"><i class="ti ti-users" style="color:var(--blue);font-size:13px"></i></div>
+          <div class="act-text"><strong>47 new leads</strong> captured today</div>
+          <div class="act-val">↑ Hot</div>
+        </div>
+        <div class="act-item">
+          <div class="act-icon" style="background:rgba(26,111,255,0.1)"><i class="ti ti-chart-bar" style="color:var(--cyan);font-size:13px"></i></div>
+          <div class="act-text"><strong>SEO ranking</strong> jumped to #2</div>
+          <div class="act-val">+6 ↑</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="wrap">
+    <div class="stats-row">
+      <div class="stat-box"><div class="s-num" data-target="50" data-suffix="M+"><span class="c">50M+</span></div><div class="s-desc">Data points daily</div></div>
+      <div class="stat-box"><div class="s-num" data-target="2500" data-suffix="+">2500<span class="c">+</span></div><div class="s-desc">Businesses scaled</div></div>
+      <div class="stat-box"><div class="s-num" data-target="75" data-suffix="%"><span class="c">75%</span></div><div class="s-desc">Less manual work</div></div>
+      <div class="stat-box"><div class="s-num" data-target="4" data-suffix="x">4<span class="c">x</span></div><div class="s-desc">Lead conversion lift</div></div>
+      <div class="stat-box"><div class="s-num" data-target="10" data-suffix="+"><span class="c">10+</span></div><div class="s-desc">AI trained models</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<div class="logos-band">
+  <div class="logos-label">Trusted by fast-growing businesses</div>
+  <div style="overflow:hidden">
+    <div class="logos-track">
+      <span class="logo-item">Google Ads</span><span class="logo-item">Meta Business</span>
+      <span class="logo-item">HubSpot</span><span class="logo-item">Shopify</span>
+      <span class="logo-item">Salesforce</span><span class="logo-item">Mailchimp</span>
+      <span class="logo-item">Semrush</span><span class="logo-item">Ahrefs</span>
+      <span class="logo-item">Google Ads</span><span class="logo-item">Meta Business</span>
+      <span class="logo-item">HubSpot</span><span class="logo-item">Shopify</span>
+      <span class="logo-item">Salesforce</span><span class="logo-item">Mailchimp</span>
+      <span class="logo-item">Semrush</span><span class="logo-item">Ahrefs</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">What You Get</div>
+    <h2 class="sec-title">Everything to<br><span class="grad">Dominate Your Market</span></h2>
+    <p class="sec-sub">Smart AI, real experts, and automation working 24/7 — so you win more customers without the guesswork.</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-chart-line"></i></div><div class="f-title">Predictive Analytics</div><p class="f-desc">AI forecasts your campaign performance before you spend a dollar. Know what works — ahead of time.</p></div>
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-ad-2"></i></div><div class="f-title">Real-Time Ad Optimization</div><p class="f-desc">Our AI adjusts your Google and Meta budgets live — cutting waste and boosting ROAS automatically every hour.</p></div>
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-target"></i></div><div class="f-title">Smart Audience Targeting</div><p class="f-desc">Segment customers by intent, behavior, and demographics. Reach the right person with the right message every time.</p></div>
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-search"></i></div><div class="f-title">AI-Powered SEO</div><p class="f-desc">Rank higher on Google and appear in AI search results. We build and optimize content that brings organic revenue.</p></div>
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-layout-dashboard"></i></div><div class="f-title">Unified Dashboard</div><p class="f-desc">One clean command center for all your campaigns, SEO, leads, and analytics. No tab-switching. Ever.</p></div>
+      <div class="feat-card"><div class="f-icon"><i class="ti ti-map-pin"></i></div><div class="f-title">Local & Google Business</div><p class="f-desc">Automate reviews, posts, and FAQs on your Google Business Profile — without typing a single word yourself.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process-bg">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Our Process</div>
+      <h2 class="sec-title">Up and Running<br><span class="grad">in 4 Steps</span></h2>
+      <p class="sec-sub">From onboarding to scaling, we handle everything. You just watch the revenue climb.</p>
+    </div>
+    <div class="process-grid">
+      <div class="p-step"><div class="p-num">01</div><div class="p-title">Onboard & Connect</div><p class="p-desc">We set up your profile, connect your assets, and understand your goals. No tech knowledge needed.</p></div>
+      <div class="p-step"><div class="p-num">02</div><div class="p-title">AI Audit & Strategy</div><p class="p-desc">Our AI scans your online presence, spots every gap, and builds a fully custom action plan for your market.</p></div>
+      <div class="p-step"><div class="p-num">03</div><div class="p-title">Launch & Automate</div><p class="p-desc">Campaigns go live across Google and Meta — managed in real time by AI so you never lift a finger.</p></div>
+      <div class="p-step"><div class="p-num">04</div><div class="p-title">Track & Scale</div><p class="p-desc">Log in anytime for live results. Every week you get insights, competitor updates, and strategic next steps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Client Wins</div>
+      <h2 class="sec-title">Real Businesses.<br><span class="grad">Real Revenue.</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card"><div class="t-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div><p class="t-quote">"Santex AI changed how we think about marketing. Our leads doubled in the first month — and the dashboard makes it crystal clear why it's working."</p><div class="t-author"><div class="t-av">JM</div><div><div class="t-name">James Mitchell</div><div class="t-role">CEO, Apex Solutions</div></div></div></div>
+      <div class="t-card"><div class="t-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div><p class="t-quote">"We cut ad spend by 30% and got better results. The AI just handles everything. I check the dashboard on my phone and every metric is moving the right way."</p><div class="t-author"><div class="t-av">SR</div><div><div class="t-name">Sara Rahman</div><div class="t-role">Founder, Bloom Studio</div></div></div></div>
+      <div class="t-card"><div class="t-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div><p class="t-quote">"As a small business owner I had no marketing team. Santex AI gave us enterprise-level strategy at a price that actually made sense for us."</p><div class="t-author"><div class="t-av">DK</div><div><div class="t-name">David Kim</div><div class="t-role">Owner, Prime Auto Group</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="wrap">
+  <div class="cta-wrap">
+    <h2>Ready to Run Toward Revenue?</h2>
+    <p>Join 2,500+ businesses scaling with Santex AI.<br>No contracts. Cancel anytime. We work hard for real results.</p>
+    <div class="btn-group">
+      <a href="pricing.html" class="btn btn-blue">Get a Free Audit &rarr;</a>
+      <a href="about.html" class="btn btn-outline">Learn About Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="rr-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Santex<span>AI</span></a>
+        <p>AI-powered marketing that turns traffic into transactions. Built for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-x"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="solutions.html">AI SEO</a></li><li><a href="solutions.html">Google Ads</a></li><li><a href="solutions.html">Meta Ads</a></li><li><a href="solutions.html">Local Marketing</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="data-security.html">Data Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Santex AI. All rights reserved.</p>
+      <p>Built to run. Built to win.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Bar chart
+(function(){
+  var h=[32,50,24,65,42,78,58],c=['#1a6fff','#00d4ff','#1a6fff','#00d4ff','#1a6fff','#00d4ff','#1a6fff'];
+  var el=document.getElementById('bars'); if(!el) return;
+  h.forEach(function(v,i){
+    var b=document.createElement('div'); b.className='bar';
+    b.style.cssText='flex:1;border-radius:4px 4px 0 0;height:0;background:'+c[i]+';opacity:'+(0.4+i*0.08)+';transition:height 1s ease '+(i*0.1)+'s';
+    el.appendChild(b); setTimeout(function(){ b.style.height=v+'px'; },300);
+  });
+})();
+// Scroll reveal
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var els=document.querySelectorAll('.feat-card,.t-card,.p-step');
+  els.forEach(function(e){ e.style.cssText+='opacity:0;transform:translateY(22px);transition:opacity 0.5s ease,transform 0.5s ease'; });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.style.opacity='1'; en.target.style.transform='translateY(0)'; obs.unobserve(en.target); } });
+  },{threshold:0.1});
+  els.forEach(function(e){ obs.observe(e); });
+})();
+// Stat count-up
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var nums=document.querySelectorAll('.s-num');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el=en.target;
+      var target=parseInt(el.getAttribute('data-target'),10);
+      var suffix=el.getAttribute('data-suffix')||'';
+      var dur=1100, start=null;
+      function frame(ts){
+        if(!start) start=ts;
+        var p=Math.min((ts-start)/dur,1);
+        var val=Math.floor(p*target);
+        el.innerHTML = (val===target?target:val) + '<span class="c">'+suffix+'</span>';
+        if(p<1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+      obs.unobserve(el);
+    });
+  },{threshold:0.4});
+  nums.forEach(function(e){ obs.observe(e); });
+})();
+</script>
+</body>
+</html>

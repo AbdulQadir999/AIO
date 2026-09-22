@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="See Santex AI pricing plans in AED — flexible, month-to-month packages for SEO, paid ads, and local marketing, with no long-term contracts.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santexai.com/pricing.html">
+<meta property="og:title" content="Pricing — Santex AI">
+<meta property="og:description" content="See Santex AI pricing plans in AED — flexible, month-to-month packages for SEO, paid ads, and local marketing, with no long-term contracts.">
+<meta property="og:image" content="https://santexai.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pricing — Santex AI">
+<meta name="twitter:description" content="See Santex AI pricing plans in AED — flexible, month-to-month packages for SEO, paid ads, and local marketing, with no long-term contracts.">
+<title>Pricing — Santex AI</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
+<style>
+.page-hero { padding:clamp(5rem,10vw,8rem) 0 clamp(3rem,6vw,4rem); text-align:center; position:relative; overflow:hidden; }
+.page-hero::before {
+  content:''; position:absolute; top:-150px; left:50%; transform:translateX(-50%);
+  width:800px; height:600px;
+  background:radial-gradient(ellipse,rgba(26,111,255,0.08),transparent 70%);
+  pointer-events:none;
+}
+.page-hero h1 { font-size:clamp(2.6rem,5vw,4rem); font-weight:900; color:#fff; letter-spacing:-2px; margin-bottom:1rem; }
+.page-hero p { color:var(--muted2); font-size:1.05rem; line-height:1.8; max-width:560px; margin:0 auto 2rem; }
+
+/* Toggle */
+.billing-toggle {
+  display:inline-flex; align-items:center; gap:0.75rem;
+  background:var(--card); border:1px solid var(--border2);
+  border-radius:100px; padding:0.4rem 0.4rem 0.4rem 1rem;
+  margin-bottom:3.5rem;
+}
+.billing-toggle span { font-size:0.85rem; font-weight:600; color:var(--muted2); }
+.toggle-switch {
+  width:44px; height:24px; background:var(--blue); border-radius:100px;
+  position:relative; cursor:pointer; transition:background 0.2s;
+}
+.toggle-switch::after {
+  content:''; position:absolute; top:3px; left:3px;
+  width:18px; height:18px; border-radius:50%; background:#fff;
+  transition:transform 0.2s;
+}
+.toggle-switch.off { background:var(--card2); }
+.toggle-switch.off::after { transform:none; }
+.save-badge {
+  background:rgba(0,212,255,0.1); border:1px solid rgba(0,212,255,0.25);
+  color:var(--cyan); font-size:0.72rem; font-weight:700;
+  padding:0.25rem 0.65rem; border-radius:100px; letter-spacing:0.04em;
+}
+
+/* Pricing grid */
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:1rem; }
+.p-card {
+  background:var(--card); border:1px solid var(--border2);
+  border-radius:20px; padding:2rem 2rem 2.25rem;
+  position:relative; display:flex; flex-direction:column;
+  transition:border-color 0.25s, transform 0.25s;
+}
+.p-card:hover { border-color:var(--border); transform:translateY(-4px); }
+.p-card.popular {
+  border-color:var(--blue);
+  background:linear-gradient(160deg,rgba(26,111,255,0.07),var(--card));
+}
+.popular-badge {
+  position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff; font-size:0.72rem; font-weight:800;
+  padding:0.3rem 1.1rem; border-radius:100px; letter-spacing:0.05em;
+  text-transform:uppercase; white-space:nowrap;
+}
+.discount-badge {
+  position:absolute; top:1.25rem; right:1.25rem;
+  background:rgba(0,212,255,0.1); border:1px solid rgba(0,212,255,0.25);
+  color:var(--cyan); font-size:0.68rem; font-weight:700;
+  padding:0.2rem 0.6rem; border-radius:100px;
+}
+.p-name { font-size:1.7rem; font-weight:900; color:#fff; margin-bottom:0.4rem; letter-spacing:-0.75px; }
+.p-name.grad-name { background:linear-gradient(135deg,var(--blue),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.p-tagline { font-size:0.88rem; color:var(--muted); margin-bottom:1.5rem; line-height:1.55; }
+.p-price-row { display:flex; align-items:baseline; gap:0.5rem; margin-bottom:0.4rem; }
+.p-old { font-size:0.95rem; color:var(--muted); text-decoration:line-through; font-weight:600; }
+.p-price { font-size:clamp(2rem,4.2vw,2.65rem); font-weight:900; color:#fff; letter-spacing:-1.5px; line-height:1; }
+.p-price-suffix { font-size:0.9rem; color:var(--muted); font-weight:600; }
+.p-divider { border:none; border-top:1px solid var(--border2); margin:1.5rem 0; }
+.p-features { list-style:none; flex:1; display:flex; flex-direction:column; gap:0.85rem; margin-bottom:1.75rem; }
+.p-features li { display:flex; align-items:center; gap:0.75rem; font-size:0.9rem; color:var(--muted2); line-height:1.5; font-weight:500; }
+.p-features li i {
+  width:20px; height:20px; border-radius:50%;
+  background:rgba(0,212,255,0.14); border:1px solid rgba(0,212,255,0.35);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--cyan); font-size:11px; flex-shrink:0;
+}
+.p-btn {
+  display:block; text-align:center; text-decoration:none;
+  font-family:var(--ff); font-weight:700; font-size:0.92rem;
+  padding:0.85rem; border-radius:100px; cursor:pointer;
+  border:none; transition:all 0.22s;
+}
+.p-btn-primary {
+  background:linear-gradient(135deg,var(--blue),#00a8d4);
+  color:#fff;
+}
+.p-btn-primary:hover { opacity:0.9; transform:translateY(-2px); box-shadow:0 8px 24px rgba(26,111,255,0.35); }
+.p-btn-outline {
+  background:transparent; color:var(--text);
+  border:1px solid var(--border2);
+}
+.p-btn-outline:hover { border-color:var(--blue); color:var(--cyan); }
+
+/* FAQ */
+.faq-wrap { max-width:720px; margin:0 auto; }
+.faq-item {
+  border-bottom:1px solid var(--border2); padding:1.4rem 0; cursor:pointer;
+}
+.faq-q {
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:0.95rem; font-weight:700; color:#fff;
+}
+.faq-q i { color:var(--cyan); font-size:18px; transition:transform 0.2s; flex-shrink:0; }
+.faq-a { font-size:0.875rem; color:var(--muted2); line-height:1.78; max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.2s; }
+.faq-item.open .faq-a { max-height:200px; padding-top:0.85rem; }
+.faq-item.open .faq-q i { transform:rotate(45deg); }
+
+/* Guarantee */
+.guarantee { background:var(--bg2); border:1px solid var(--border2); border-radius:20px; padding:clamp(2.5rem,6vw,4rem); text-align:center; margin:5rem 0 0; }
+.guarantee-icon { font-size:3rem; color:var(--cyan); margin-bottom:1.1rem; }
+.guarantee h3 { font-size:clamp(1.7rem,3.5vw,2.3rem); font-weight:900; color:#fff; margin-bottom:0.9rem; letter-spacing:-1px; }
+.guarantee p { color:var(--muted2); font-size:1rem; line-height:1.85; max-width:560px; margin:0 auto; }
+
+/* Trust row */
+.trust-row { display:flex; justify-content:center; gap:1.75rem; flex-wrap:wrap; margin-top:2.75rem; }
+.trust-item { display:flex; align-items:center; gap:0.6rem; font-size:0.85rem; color:var(--muted2); font-weight:600; }
+.trust-item i {
+  width:26px; height:26px; border-radius:50%;
+  background:rgba(0,212,255,0.12); border:1px solid rgba(0,212,255,0.3);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--cyan); font-size:13px;
+}
+
+@media(max-width:900px){
+  .pricing-grid { grid-template-columns:1fr; max-width:460px; margin-left:auto; margin-right:auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="rr-nav">
+  <div class="wrap nav-inner">
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="nav-logo">Santex<span>AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Flexible Pricing</div>
+    <h1>Plans Built for<br><span class="grad">Every Business</span></h1>
+    <p>From local businesses getting started to multi-location brands going all-in on growth. No hidden fees, no lock-in.</p>
+
+    <div class="billing-toggle">
+      <span>Monthly</span>
+      <div class="toggle-switch" id="toggle" onclick="toggleBilling()"></div>
+      <span>Yearly</span>
+      <span class="save-badge">Save 20%</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="p-card">
+        <div class="p-name">Steady &amp; Solid</div>
+        <div class="p-tagline">For getting your local presence connected, optimized, and found.</div>
+        <div class="p-price-row">
+          <div class="p-price" id="price1">AED 950</div>
+          <div class="p-price-suffix">/mo</div>
+        </div>
+        <hr class="p-divider">
+        <ul class="p-features">
+          <li><i class="ti ti-check"></i> Website SEO automation (on-page fixes)</li>
+          <li><i class="ti ti-check"></i> Google Business Profile management</li>
+          <li><i class="ti ti-check"></i> Review monitoring &amp; responses</li>
+          <li><i class="ti ti-check"></i> Performance dashboard</li>
+          <li><i class="ti ti-check"></i> Monthly AI content (2 articles)</li>
+          <li><i class="ti ti-check"></i> Weekly email reports</li>
+        </ul>
+        <a href="#" class="p-btn p-btn-outline">Get Started &rarr;</a>
+      </div>
+
+      <!-- POPULAR -->
+      <div class="p-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="discount-badge">20% OFF</div>
+        <div class="p-name grad-name">Crush My Competition</div>
+        <div class="p-tagline">For businesses ready to outrank, outpace, and pull ahead of the competition.</div>
+        <div class="p-price-row">
+          <div class="p-old" id="old2">AED 1,620</div>
+          <div class="p-price" id="price2">AED 1,290</div>
+          <div class="p-price-suffix">/mo</div>
+        </div>
+        <hr class="p-divider">
+        <ul class="p-features">
+          <li><i class="ti ti-check"></i> Everything in Steady &amp; Solid</li>
+          <li><i class="ti ti-check"></i> GEO — get found on ChatGPT, Gemini &amp; Perplexity</li>
+          <li><i class="ti ti-check"></i> Built-in ads control (Meta &amp; Google)</li>
+          <li><i class="ti ti-check"></i> Competitor tracking &amp; analysis</li>
+          <li><i class="ti ti-check"></i> AI assistant + mobile app</li>
+          <li><i class="ti ti-check"></i> Priority support (24hr response)</li>
+          <li><i class="ti ti-check"></i> 5 AI articles per month</li>
+        </ul>
+        <a href="#" class="p-btn p-btn-primary">Get Started &rarr;</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="p-card">
+        <div class="discount-badge">20% OFF</div>
+        <div class="p-name">Rush &amp; Rank</div>
+        <div class="p-tagline">For multi-location brands and businesses going all-in on growth at scale.</div>
+        <div class="p-price-row">
+          <div class="p-old" id="old3">AED 2,820</div>
+          <div class="p-price" id="price3">AED 2,250</div>
+          <div class="p-price-suffix">/mo</div>
+        </div>
+        <hr class="p-divider">
+        <ul class="p-features">
+          <li><i class="ti ti-check"></i> Everything in Crush My Competition</li>
+          <li><i class="ti ti-check"></i> Multi-location management (up to 10)</li>
+          <li><i class="ti ti-check"></i> PR distribution + email campaigns</li>
+          <li><i class="ti ti-check"></i> AI Video Studio &amp; image generation</li>
+          <li><i class="ti ti-check"></i> Dedicated account manager</li>
+          <li><i class="ti ti-check"></i> Custom integrations</li>
+          <li><i class="ti ti-check"></i> Unlimited AI content</li>
+        </ul>
+        <a href="#" class="p-btn p-btn-outline">Get Started &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee">
+      <div class="guarantee-icon"><i class="ti ti-shield-check"></i></div>
+      <h3>Our Commitment to Results</h3>
+      <p>We build every campaign around one goal — real, measurable growth for your business. You get a live dashboard, weekly reporting, and a team that's genuinely invested in your numbers moving in the right direction. No fine print, no hidden fees — just consistent, honest work.</p>
+      <div class="trust-row">
+        <div class="trust-item"><i class="ti ti-lock"></i> No contracts</div>
+        <div class="trust-item"><i class="ti ti-x"></i> Cancel anytime</div>
+        <div class="trust-item"><i class="ti ti-report"></i> Weekly reporting</div>
+        <div class="trust-item"><i class="ti ti-headset"></i> Dedicated support</div>
+        <div class="trust-item"><i class="ti ti-shield"></i> GDPR compliant</div>
+        <div class="trust-item"><i class="ti ti-credit-card"></i> Secure payments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:3rem">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="sec-title">Questions?<br><span class="grad">We've Got Answers.</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item open">
+        <div class="faq-q">How quickly will I see results? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">Most clients see measurable improvements in leads and traffic within the first 30 days. SEO results compound over time, while paid ads typically show improvements within the first 1–2 weeks of optimization.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to sign a contract? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">No contracts, ever. We earn your business every month. You can cancel anytime with 30 days notice, and we'll wrap up all your campaigns cleanly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does the setup process look like? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">Onboarding takes about 48 hours. We connect your accounts, run an AI audit, and have your first campaigns live within 5 business days. Our team handles everything — you don't need to be technical.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I upgrade or downgrade my plan? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">Absolutely. You can change your plan at any time. Upgrades take effect immediately, and downgrades apply at the start of your next billing cycle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is ad spend included in the pricing? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">No — ad spend is separate and goes directly to Google and Meta. Our fee covers management, optimization, and strategy. We typically recommend a minimum ad spend of AED 1,800/month to see meaningful results.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What industries do you work with? <i class="ti ti-plus"></i></div>
+        <div class="faq-a">We work with businesses across most industries — local services, e-commerce, professional services, healthcare, real estate, and more. If you're not sure if we're a fit, book a free audit and we'll tell you honestly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="rr-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Santex<span>AI</span></a>
+        <p>AI-powered marketing that turns traffic into transactions. Built for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="soc"><i class="ti ti-brand-x"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="solutions.html">AI SEO</a></li><li><a href="solutions.html">Google Ads</a></li><li><a href="solutions.html">Meta Ads</a></li><li><a href="solutions.html">Local Marketing</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="data-security.html">Data Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Santex AI. All rights reserved.</p>
+      <p>Built to run. Built to win.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Billing toggle
+var yearly = false;
+var prices = { p1:[950,760], p2:[1290,1030], p3:[2250,1800], old2:[1620,1290], old3:[2820,2250] };
+function fmt(n){ return 'AED ' + n.toLocaleString('en-US'); }
+function toggleBilling(){
+  yearly = !yearly;
+  var t = document.getElementById('toggle');
+  t.classList.toggle('off', !yearly);
+  document.getElementById('price1').textContent = fmt(prices.p1[yearly?1:0]);
+  document.getElementById('price2').textContent = fmt(prices.p2[yearly?1:0]);
+  document.getElementById('price3').textContent = fmt(prices.p3[yearly?1:0]);
+  document.getElementById('old2').textContent  = fmt(prices.old2[yearly?1:0]);
+  document.getElementById('old3').textContent  = fmt(prices.old3[yearly?1:0]);
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(function(item){
+  item.querySelector('.faq-q').addEventListener('click', function(){
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// Scroll reveal
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.p-card,.faq-item,.trust-item');
+  els.forEach(function(e){ e.style.cssText+='opacity:0;transform:translateY(18px);transition:opacity 0.45s ease,transform 0.45s ease'; });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en,i){ if(en.isIntersecting){ setTimeout(function(){ en.target.style.opacity='1'; en.target.style.transform='translateY(0)'; },i*70); obs.unobserve(en.target); } });
+  },{threshold:0.08});
+  els.forEach(function(e){ obs.observe(e); });
+})();
+</script>
+</body>
+</html>
